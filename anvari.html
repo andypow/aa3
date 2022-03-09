@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- include anvari.js -->
+    <script src="anvari.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Arman Anvari</title>
+    <style>
+        .collapsible {
+          background-color: #777;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+        }
+
+        .active, .collapsible:hover {
+          background-color: #555;
+        }
+
+        .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f1f1f1;
+        }
+        </style>
+        </head>
+        <body>
+  </head>
+  <body>
+
+
+
+    <button type="button" class="collapsible">About Arman Anvari</button>
+    <div class="content">
+                <p>
+                    <b>Arman Anvari</b> is a graduate of Michigan Law school and an attorney.
+                    Between 2010 and 2016 he worked at Latham & Watkins LLP in Houston, TX before moving to
+                    Baker & McKenzie LLP for a year before a short stint at Perkins Coie in Chicago. During his
+                    tenure at these law firms, he was an avid poster on web forum <a href="https://autoadmit.com/">autoadmit.com</a> where
+                    this website's quotes are drawn. If you were represented by Arman Anvari during that time, you may be eligible for compensation.
+                </p>
+    </div>
+
+
+        <div style="text-align:center;position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;height:200px">
+            <div style="font-size:250%;">
+                <span id="quote">&ldquo;</span>
+            </div>
+
+            <div style="font-size:200%;">
+                <span id="author"><br/>&mdash; Arman Anvari</span>
+            </div>
+
+            <div style="font-size:150%;">
+                <span><br/><a href="">Give me another quote</a></span>
+            </div>
+
+            <!-- <span style="font-size:100%" id="date"></span> -->
+        </div>
+        <script language="javascript">
+            var coll = document.getElementsByClassName("collapsible");
+            for ( i = 0; i < coll.length; i++) {
+
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+            // draw a random element from array "anvari"
+            var element = anvari[Math.floor(Math.random()*anvari.length)];
+            document.getElementById('quote').innerHTML = "&ldquo;" + element.post + "&rdquo;"
+            // document.getElementById('date').innerHTML =  element.datetime ;
+        </script>
+
+        <!-- Collapsible about section regarding anvari-->
+
+
+
+
+  </body>
+</html>
